@@ -1,6 +1,5 @@
 package com.taller2.model;
 
-import com.taller2.*;
 import com.taller2.interfaces.*;
 
 public class Camioneta extends Vehiculo implements Rentable, Asegurable {
@@ -27,4 +26,13 @@ public class Camioneta extends Vehiculo implements Rentable, Asegurable {
             throw new IllegalArgumentException("Los dias deben ser positivos");
         return getEstrategiaPrecio().total(dias, costoBaseDia(), calcularPrecioAlquiler(dias));
     }
+
+    public double getCapacidadCarga() {
+        return capacidadCarga;
+    }
+
+    public void setCapacidadCarga(double capacidadCarga) {
+        this.capacidadCarga = capacidadCarga;
+    }
+
 }
