@@ -4,14 +4,12 @@ import com.taller2.strategy.EstrategiaPrecio;
 
 public abstract class Vehiculo {
 
-    // Creamos los campos
     private String placa;
     private String marca;
     private String modelo;
     private double km;
     private EstrategiaPrecio estrategiaPrecio;
 
-    // Creamos el constructor vehiculo
     public Vehiculo(String placa, String marca, String modelo, double km) {
         this.placa = placa;
         this.marca = marca;
@@ -19,10 +17,7 @@ public abstract class Vehiculo {
         this.km = km;
     }
 
-    // Creamos nuestro metodo abstracto costoBaseDia
     public abstract double costoBaseDia();
-
-    // Creamos los concretos toString() y sumarKm(double km)
 
     public void sumarKm(double km) {
         if (km < 0)
@@ -34,7 +29,6 @@ public abstract class Vehiculo {
         return getClass().getSimpleName() + "[" + placa + " - " + marca + " " + modelo + " - km:" + km + "]";
     }
 
-    // Creamos los getters and setters
     public String getPlaca() {
         return placa;
     }
